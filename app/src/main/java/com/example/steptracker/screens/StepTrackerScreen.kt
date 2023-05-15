@@ -69,6 +69,7 @@ fun StepTrackerScreen() {
         } else if (!permissionState.value) {
             requestPermissionLauncher.launch(Manifest.permission.ACTIVITY_RECOGNITION)
         }
+
         onDispose {
             sensorManager.unregisterListener(sensorEventListener)
         }
